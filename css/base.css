@@ -1,0 +1,39 @@
+:root{--blue:#0255ca;--cyan:#0d94da;--bg:#f2f7fc;--ink:#12263f;--mut:#5b6b7f;--mut2:#737785;--txt:#424654;--line:#d5e2ef;--chip:#eff3ff;--chip2:#e6eeff;--chip3:#dde9ff;--ic:#d4e3ff;--grad:linear-gradient(to bottom,var(--cyan),var(--blue));--gradr:linear-gradient(to right,var(--cyan),var(--blue))}
+*{box-sizing:border-box;margin:0}
+body{font:400 14px 'Nunito Sans',system-ui,sans-serif;color:var(--ink);background:#dfe7f3}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+a{color:inherit;text-decoration:none}
+.ic{display:block;flex:none}
+#app{position:relative;max-width:420px;height:100dvh;margin:auto;background:var(--bg);display:flex;flex-direction:column;overflow:hidden}
+header{height:56px;flex:none;display:flex;align-items:center;gap:8px;padding:0 16px;background:rgba(255,255,255,.9);box-shadow:0 1px 4px rgba(2,85,202,.06);z-index:2}
+header b{font-size:16px;font-weight:700;flex:1}
+.sep{color:#c3c6d6;font-size:16px}
+.logo{position:relative;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;overflow:hidden;flex:none}
+.logo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.logo svg{width:60%}
+.avatar{width:32px;height:32px;border-radius:16px;background:var(--blue);color:#fff;display:grid;place-items:center}
+#view{flex:1;overflow:auto}
+.pad{padding:12px 16px 100px}
+nav{position:absolute;left:0;right:0;bottom:0;height:68px;display:flex;align-items:center;padding:0 16px;background:rgba(255,255,255,.95);border-radius:20px 20px 0 0;filter:drop-shadow(0 -4px 10px rgba(2,85,202,.08));z-index:3}
+nav a{flex:1;position:relative;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:11px;font-weight:600;color:var(--txt)}
+nav a.on{color:var(--blue);font-weight:700}
+nav .sp{width:24px;height:24px}
+nav .mid b{position:absolute;top:-32px;left:50%;transform:translateX(-50%);width:58px;height:58px;border-radius:29px;background:var(--grad);border:4px solid #fff;box-shadow:0 4px 16px rgba(2,85,202,.35);display:grid;place-items:center;color:#fff}
+[data-r=especie] header,[data-r=especie] nav{display:none}
+.badge{display:inline-flex;align-items:center;gap:5px;padding:3px 10px 3px 8px;border-radius:999px;font-size:11px;font-weight:700;white-space:nowrap}
+.badge::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.nativa{background:#e3f3ea;color:#1f7a4d}.endemica{background:#ece8f7;color:#6a4fb3}.migratoria{background:#dfeeff;color:#0255ca}.introducida{background:#fdeed8;color:#a05a00}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+.chip{display:flex;align-items:center;gap:6px;padding:7px 14px 7px 12px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:12px;font-weight:600;color:var(--txt);white-space:nowrap;flex:none}
+.chip.on{background:var(--gradr);border-color:transparent;color:#fff;font-weight:700;box-shadow:0 2px 8px rgba(2,85,202,.25)}
+.dot{width:8px;height:8px;border-radius:50%;flex:none}
+.sci{font-style:italic;color:var(--mut2)}
+.muted{color:var(--mut);font-size:13px}
+#splash{position:absolute;inset:0;z-index:9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:radial-gradient(circle at 50% 0,#d3e8ff,transparent 55%),radial-gradient(circle at 50% 45%,#e4f1ff,transparent 55%),#fff;transition:opacity .4s}
+#splash.out{opacity:0;pointer-events:none}
+.logo.big{width:148px;height:148px;box-shadow:0 12px 32px rgba(2,85,202,.3)}
+.word{font-size:52px;font-weight:300;letter-spacing:2px;color:var(--blue);line-height:1}.word span{color:#f26a2e}
+#splash p{font-size:12px;color:var(--mut)}
+.load{position:absolute;bottom:56px;display:flex;flex-direction:column;align-items:center;gap:8px}
+.bar{width:176px;height:6px;border-radius:3px;background:#dde9ff;overflow:hidden}.bar i{display:block;width:40%;height:100%;border-radius:3px;background:var(--gradr);animation:ld 1.2s ease-in-out infinite alternate}
+@keyframes ld{to{transform:translateX(150%)}}
+.load small{font-size:10px;font-weight:600;letter-spacing:1px;color:var(--mut)}

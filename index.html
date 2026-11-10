@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0255ca"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="apple-touch-icon" href="assets/icon-180.png"><link rel="icon" href="assets/icon-192.png"><title>VueLa</title>
+<link rel="manifest" href="manifest.webmanifest"><link rel="preload" as="image" href="assets/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,600;0,6..12,700;0,6..12,800;1,6..12,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css"><link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/screens.css"></head>
+<body><div id="app" data-r="camara">
+<div id="splash">
+  <span class="logo big"><img src="assets/logo.svg" alt="" onerror="this.remove()"></span>
+  <div class="word">Vue<span>La</span></div>
+  <p>Identificador de aves de La Paz, B.C.S.</p>
+  <div class="load"><div class="bar"><i></i></div><small>● CARGANDO ESPECIES</small></div>
+</div>
+<header><span class="logo"><img src="assets/logo.svg" alt="" onerror="this.remove()"></span><span class="sep">|</span><b id="title"></b><button class="avatar" id="avatar" aria-label="Perfil"></button></header>
+<main id="view"></main><nav id="nav"></nav>
+</div><script src="vendor/leaflet/leaflet.js"></script><script type="module" src="js/main.js"></script></body></html>
